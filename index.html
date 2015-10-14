@@ -66,7 +66,8 @@
               <ul>
                 <li>Deprecates <a href="http://river.suse.de/">river.suse.de</a></li>
                 <li>It will become in the 'default' internal instance</li>
-                <li>Maintaned with up-to-date Jenkins (including plugins)</li>
+                <li>Maintained with up-to-date Jenkins (including plugins)</li>
+                <li>Conservative</li>
               </ul>
             </li>
           </ul>
@@ -76,10 +77,10 @@
           <h2>ci.suse.de policy</h2>
           <ul>
             <li>One account per team</li>
-            <li>Workers and jobs should be prefixed (<em>yast-</em>, <em>installtools-</em>, etc.)</li>
+            <li>Workers and jobs should be prefixed (<em>yast-</em>, <em>installtools-</em>, <em>libyui-</em>)</li>
             <li>Non-prefixed jobs will be shown in <em>zz-prefix-missing</em> tab</li>
             <li>Custom per-team views are available</li>
-            <li>Your jobs should run <strong>in your workers</strong> (use labels)</li>
+            <li>Our jobs should run <strong>in our own workers</strong> (using labels)</li>
           </ul>
         </section>
 
@@ -91,7 +92,7 @@
           <h2>4 types</h2>
           <ul>
             <li>YaST (<em>yast-head</em>): basically YaST modules</li>
-            <li>Libyui (<em>libyui</em>): are now handled in the same way as <em>yast</em> ones</li>
+            <li>Libyui (<em>libyui</em>): are now handled in the same way as <em>YaST</em> ones</li>
             <li>Linuxrc/InstallTools (<em>linuxrc</em>): Linuxrc and related projects</li>
             <li>AutoYaST (<em>autoyast</em>): AutoYaST integration tests</li>
           </ul>
@@ -121,7 +122,7 @@
           <ul>
             <li>Package <a href="https://github.com/openSUSE/linuxrc-devtools">linuxrc-devtools</a>
               contains needed scripts.</li>
-            <li>Separated Jenkins jobs for running the test suite and submitting the packages</li>
+            <li>Separated Jenkins jobs for building the packages and submitting them</li>
             <li>Both jobs should run in the same machine</li>
           </ul>
           <ol>
@@ -150,9 +151,8 @@
           <h2>YaST/Libyui workers</h2>
           <ul>
             <li><code>vm-yast-ci-worker</code> at Prague cluster</li>
-            <li><code>vm-yast-ci-worker2</code> and
-              <code>vm-yast-ci-worker3</code> at
-              <code>auto.suse.cz</code></li>
+            <li><code>vm-yast-ci-worker{2,3}</code>
+              at <code>auto.suse.cz</code></li>
             <li>RAM: 4GB per machine</li>
             <li>Only 1 simultaneous running job per worker</li>
           </ul>
@@ -161,9 +161,8 @@
         <section>
           <h2>InstallTools workers</h2>
           <ul>
-            <li><code>vm-linuxrc-ci-worker2</code> and
-              <code>vm-linuxrc-ci-worker3</code> at
-              <code>auto.suse.cz</code></li>
+            <li><code>vm-linuxrc-ci-worker{2,3}</code>
+              at <code>auto.suse.cz</code></li>
             <li>RAM: 4GB per machine</li>
             <li>Up 2 simultaneous running jobs per worker</li>
           </ul>
