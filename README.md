@@ -1,6 +1,9 @@
-# YaST CI talk
+# SUSE talks
 
-Some slides for a talk about YaST CI built using [reveal.js](http://lab.hakim.se/reveal-js).
+Some slides for different talks. All of them are built using [reveal.js](http://lab.hakim.se/reveal-js).
+
+* yast-ci.html: YaST CI
+* aytests: AutoYaST integration tests
 
 ## License
 
